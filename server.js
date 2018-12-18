@@ -2,6 +2,10 @@
 //--------------------------------------------------------------------------------
 var express = require("express");
 var bodyParser = require("body-parser");
+var session = require("express-session");
+var passport = require("./config/passport");
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
 //SET UP EXPRESS
 //--------------------------------------------------------------------------------
@@ -14,10 +18,12 @@ var db = require("./models");
 
 //SET UP DATA PARSING
 //--------------------------------------------------------------------------------
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 //STATIC DIRECTORY
 //--------------------------------------------------------------------------------
@@ -30,7 +36,9 @@ require("./routes/api-routes.js")(app);
 
 //SYNC SEQUELIZE MODELS AND START EXPRESS APP
 //--------------------------------------------------------------------------------
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ 
+    // force: true 
+}).then(function() {
     app.listen(PORT, function() {
         console.log("App is listening on PORT " + PORT);
     });

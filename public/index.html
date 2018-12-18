@@ -9,6 +9,7 @@
     <title>dezVous</title>
     <!-- add V logo to tab -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
@@ -25,15 +26,16 @@
             <!-- small text above navbar with username to show logged in status? binary: "username" or "Log In?", log in modal, username leads to account page? -->
 
             <ul>
-                <li id="Home"></li>
+                <li id="Home"><a href="/">Home</a></li>
                 <!-- links to landing page, when clicked on landing page refresh? -->
-                <li id="Create"></li>
+                <li id="Create"><a href="/create">Create</a></li>
                 <!-- links to app page, scroll down animation? push landing page content down?-->
-                <li id="Account"></li>
+                <li id="Account"><a href="/account">Account</a></li>
                 <!-- links to user account page, if not logged in to sign up page? sign up modal? integrate google auth? optional? -->
-                <li id="Contact Us"></li>
+                <li id="Contact Us"><a href="contactus">Contact Us</a></li>
                 <!-- links to our portfolios? linkedIn pages? short "about us" segment? github repo for website? -->
             </ul>
+
 
         </div>
 
@@ -41,13 +43,23 @@
 
     <div id="container">
 
-        <div id="WIP user account info">
-            <!-- Info about account, google user info?, past searches?, past events? G+ friends that use site? user social media links? -->
+        <h1>Sign up for an account</h1>
 
-        </div>
+        <form class="signup">
+            <input type="text" id="username-input" placeholder="Your username">
+            <input type="email" id="email-input" placeholder="Your email">
+            <input type="password" id="password-input" placeholder="Your password">
+            <button type="submit">Submit</button>
+            <br><br>
 
-        <div>
-            <!-- recommended services, maybe based on past searches?, scrollable list embedded in page, scroll in recommended box, page doesn't scroll kinda thing?, first few suggestions are "featured" because service paid to be shown, next are based on past? -->
+            <a href="/account">
+                <h2>Actually, I just need to log in</h2>
+            </a>
+        </form>
+
+        <div id="WIP info bar">
+            <!-- "What can I expect from dezVous?" stylistic font -->
+
         </div>
 
         <div id="exampleResults">
@@ -73,6 +85,14 @@
     </div>
 
     <footer id="Copyright"></footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/login.js"></script>
+
 
 </body>
 

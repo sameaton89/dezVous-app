@@ -25,15 +25,16 @@
             <!-- small text above navbar with username to show logged in status? binary: "username" or "Log In?", log in modal, username leads to account page? -->
 
             <ul>
-                <li id="Home"></li>
+                <li id="Home"><a href="/">Home</a></li>
                 <!-- links to landing page, when clicked on landing page refresh? -->
-                <li id="Create"></li>
+                <li id="Create"><a href="/create">Create</a></li>
                 <!-- links to app page, scroll down animation? push landing page content down?-->
-                <li id="Account"></li>
+                <li id="Account"><a href="/account">Account</a></li>
                 <!-- links to user account page, if not logged in to sign up page? sign up modal? integrate google auth? optional? -->
-                <li id="Contact Us"></li>
+                <li id="Contact Us"><a href="contactus">Contact Us</a></li>
                 <!-- links to our portfolios? linkedIn pages? short "about us" segment? github repo for website? -->
             </ul>
+
 
         </div>
 
@@ -42,28 +43,25 @@
     <div id="container">
 
         <div id="WIP info bar">
-            <!-- "What can I expect from dezVous?" stylistic font -->
+            <!-- "Get Started" -->
 
         </div>
 
-        <div id="exampleResults">
-            <!-- example of possible results for wedding?, stick images in bg, stacking text blurbs with info on delivery, catering, location, hover over blurb for more in depth info, link to example company?, example satisfied user review for site? -->
+        <div id="surveyContainer">
+            <!-- maybe dynamic survey?, no page refresh when cycling "pages" of survey?, different types for different questions types, some drop down menus, some multi check boxes, some read number values from text box, etc -->
 
-            <div id="blurbOne">
-                <!-- location info, align left, link? when hover over small burb, dynamic modal? dynamic animate second blurb scroll out? -->
+            <!-- 
+            Q1 - How many people expected to attend?
+            A1 - Range between 20 and 1000?
 
-            </div>
+            Q2 - What type of event?
+            A2 - Drop down: wedding, quinceanera, bar mitzvah, work gathering, other? - other enterable text field?
 
-            <div id="blurbTwo">
-                <!-- catering info, align right -->
+            Q3 - Where do you want it held?
+            A3 - Potentially two answer types? Either general area with zip code, or specific request with autofill from our example locations? IE if I type "Great Miami Hot" we can suggest our example,  "Great Miami Hotel"
 
-            </div>
-
-            <div id="blurbThree">
-                <!-- delivery info, align center -->
-
-            </div>
-
+            more questions, but this gets us started
+             -->
         </div>
 
     </div>
