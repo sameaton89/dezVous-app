@@ -23,6 +23,7 @@ function signUpUser(data) {
 		password : data.password,
 		userName : data.userName
 	}).then(data => {
-		window.location.replace("/")
+		window.location.replace("/create")
+		console.log(userData.username);
 	});
 }

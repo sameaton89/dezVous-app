@@ -26,6 +26,7 @@ $(document).ready(function() {
        //clear out the values after logged in
        emailInput.val("");
        passwordInput.val("");
+       console.log(userData);
      });
    
      // loginUser does a post to our "api/login" route to determine users that are current logged in
