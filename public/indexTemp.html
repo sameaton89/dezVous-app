@@ -1,0 +1,96 @@
+<!-- Landing Page -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>dezVous</title>
+    <!-- add V logo to tab -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body id="background-image">
+    <div id="navbar banner">
+        <!-- screen width, content centered on mobile, neutral bg? -->
+
+        <div id="logo">
+            <!-- dezVous logo, maybe 30% screen size, left aligned desktop centered mobile, clickable easter egg? -->
+
+        </div>
+
+        <nav id="navbar">
+            <!-- active hover, neutral colour, centered on mobile, aligned right on desktop maybe 30% screen size for all four elements, animate tab changes?, no refresh on "page" change? -->
+            <!-- small text above navbar with username to show logged in status? binary: "username" or "Log In?", log in modal, username leads to account page? -->
+
+            <ul>
+                <li id="Home"><a href="/">Home</a></li>
+                <!-- links to landing page, when clicked on landing page refresh? -->
+                <li id="Create"><a href="/create">Create</a></li>
+                <!-- links to app page, scroll down animation? push landing page content down?-->
+                <li id="Account"><a href="/account">Account</a></li>
+                <!-- links to user account page, if not logged in to sign up page? sign up modal? integrate google auth? optional? -->
+                <li id="contactUs"><a href="contactus">Contact Us</a></li>
+                <!-- links to our portfolios? linkedIn pages? short "about us" segment? github repo for website? -->
+            </ul>
+        </nav>
+    </div>
+
+    <div id="container">
+
+        <h1>Sign up for an account</h1>
+
+        <form class="signup">
+            <input type="text" id="username-input" placeholder="Your username">
+            <input type="email" id="email-input" placeholder="Your email">
+            <input type="password" id="password-input" placeholder="Your password">
+            <button type="submit">Submit</button>
+            <br><br>
+
+            <a href="/account">
+                <h2>Actually, I just need to log in</h2>
+            </a>
+        </form>
+
+        <div id="WIP info bar">
+            <!-- "What can I expect from dezVous?" stylistic font -->
+            <p>What can I expect from dezVous?</p>
+
+        </div>
+
+        <div id="exampleResults">
+            <!-- example of possible results for wedding?, stick images in bg, stacking text blurbs with info on delivery, catering, location, hover over blurb for more in depth info, link to example company?, example satisfied user review for site? -->
+
+            <div id="blurbOne">
+                <!-- location info, align left, link? when hover over small burb, dynamic modal? dynamic animate second blurb scroll out? -->
+                <p>Company AAA was a great fit for our -theme- wedding!</p>
+
+            </div>
+
+            <div id="blurbTwo">
+                <!-- catering info, align right -->
+                <p>Company BBB provided the most delicious -food- we have ever eaten!</p>
+
+            </div>
+
+            <div id="blurbThree">
+                <!-- delivery info, align center -->
+                <p>We could not have chosen a better place to have a wedding than Company CCC!</p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer id="Copyright"><p>Copyright</p></footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
