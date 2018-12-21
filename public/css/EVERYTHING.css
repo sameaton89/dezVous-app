@@ -35,3 +35,6 @@ nav#navbar-banner span {
     font-size: 60px;
     color: rgb(255, 64, 175);
 }
+.slider {
+    border-radius: 25px;
+}
