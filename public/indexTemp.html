@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Pacifico|Staatliches" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Pacifico|Staatliches" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/EVERYTHING.css">
 </head>
@@ -21,19 +21,47 @@
     <nav id="navbar-banner" class="" role="navigation">
         <!-- screen width, content centered on mobile, neutral bg? -->
         <div class="nav-wrapper N/A transparent">
-            <a class="brand-logo" src="images/200.png"></a>
-            <ul class="right">
-                <li id="Home"><a href="/"><span>Home</span></a></li>
-                <!-- links to landing page, when clicked on landing page refresh? -->
-                <li id="Create"><a href="/create"><span>Create</span></a></li>
-                <!-- links to app page, scroll down animation? push landing page content down?-->
-                <li id="Account"><a href="/account"><span>Account</span></a></li>
-                <!-- links to user account page, if not logged in to sign up page? sign up modal? integrate google auth? optional? -->
-                <li id="contactUs" class=""><a href="contactus"><span>Contact Us</span></a></li>
-                <!-- links to our portfolios? linkedIn pages? short "about us" segment? github repo for website? -->
-            </ul>
+            <div class="container">
+                <a class="brand-logo"><span>dezVous</span></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li id="Home"><a href="/"><span>Home</span></a></li>
+                    <!-- links to landing page, when clicked on landing page refresh? -->
+                    <li id="Create"><a href="/create"><span>Create</span></a></li>
+                    <!-- links to app page, scroll down animation? push landing page content down?-->
+                    <li id="Account"><a href="/account"><span>Account</span></a></li>
+                    <!-- links to user account page, if not logged in to sign up page? sign up modal? integrate google auth? optional? -->
+                    <li id="contactUs" class=""><a href="contactus"><span>Contact Us</span></a></li>
+                    <!-- links to our portfolios? linkedIn pages? short "about us" segment? github repo for website? -->
+                </ul>
+            </div>
         </div>
     </nav>
+
+
+
+
+
+
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+
+
+
+
+
 
     <div class="container">
 
@@ -58,7 +86,8 @@
                         <div class="input-field col s12">
                             <input id="password-input" type="password" class="validate">
                             <label for="password-input">Password</label>
-                            <span class="helper-text" data-error="Incorrect" data-success="Correct">Enter Valid Password</span>
+                            <span class="helper-text" data-error="Incorrect" data-success="Correct">Enter Valid
+                                Password</span>
                         </div>
                     </div>
                 </div>
@@ -78,23 +107,42 @@
 
             <div id="container">
                 <!-- example of possible results for wedding?, stick images in bg, stacking text blurbs with info on delivery, catering, location, hover over blurb for more in depth info, link to example company?, example satisfied user review for site? -->
-
-                <div id="blurbOne" class="card-panel hoverable">
-                    <!-- location info, align left, link? when hover over small burb, dynamic modal? dynamic animate second blurb scroll out? -->
-                    <p class="left-align s6 offset-s6">Company AAA was a great fit for our -theme- wedding!</p>
-
-                </div>
-
-                <div id="blurbTwo" class="card-panel hoverable">
-                    <!-- catering info, align right -->
-                    <p class="right-align">Company BBB provided the most delicious -food- we have ever eaten!</p>
-
-                </div>
-
-                <div id="blurbThree" class="card-panel hoverable">
-                    <!-- delivery info, align center -->
-                    <p class="center-align">We could not have chosen a better place to have a wedding than Company CCC!</p>
-
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="./images/pexels-photo-122260.jpeg">
+                            <div class="caption center-align">
+                                <h3>Wedding bla bla bla!</h3>
+                                <h5 class="light grey-text text-lighten-3">Company AAA was a great fit for our -theme-
+                                    wedding!</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/pexels-photo-122260.jpeg">
+                            <div class="caption left-align">
+                                <h3>Bar Mitzvah bla bla bla</h3>
+                                <h5 class="light grey-text text-lighten-3">Company BBB provided the most delicious
+                                    -food- we have
+                                    ever eaten!</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/pexels-photo-122260.jpeg">
+                            <div class="caption right-align">
+                                <h3>Queinceniera bla bla bla</h3>
+                                <h5 class="light grey-text text-lighten-3">We could not have chosen a better place to
+                                    have a
+                                    wedding than Company CCC!</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/pexels-photo-122260.jpeg">
+                            <div class="caption center-align">
+                                <h3>Thank you dezVous!</h3>
+                                <h5 class="light grey-text text-lighten-3">BEST EXPERIENCE EVERY MOTHERFUCKER</h5>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -111,6 +159,8 @@
     <!-- <script src="js/main.js"></script> -->
     <script src="js/login.js"></script>
     <!-- moved below mat -->
+    <script> $(document).ready(function () { $('.slider').slider({ full_width: true }); }); </script>
+    <!-- this line is suppooooosed to fix the slider -->
 
 </body>
 
