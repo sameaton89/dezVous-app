@@ -42,6 +42,7 @@ $(document).ready(function() {
        }).catch(function(err) {
          console.log(err);
        });
+       
      }
      //once logged in use the email and update the log state to true
      function updateLogState(email) 
@@ -86,6 +87,7 @@ $(document).ready(function() {
        localStorage.setItem("dezVous", email);
        //clear the email value
        $('#email').val(''); 
+       
      }
    //function getUpdate updates the user's setting once the user updates their 
    //personal information

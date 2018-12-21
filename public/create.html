@@ -48,25 +48,46 @@
         </div>
 
         <div id="surveyContainer">
-            <!-- maybe dynamic survey?, no page refresh when cycling "pages" of survey?, different types for different questions types, some drop down menus, some multi check boxes, some read number values from text box, etc -->
-
-            <!-- 
-            Q1 - How many people expected to attend?
-            A1 - Range between 20 and 1000?
-
-            Q2 - What type of event?
-            A2 - Drop down: wedding, quinceanera, bar mitzvah, work gathering, other? - other enterable text field?
-
-            Q3 - Where do you want it held?
-            A3 - Potentially two answer types? Either general area with zip code, or specific request with autofill from our example locations? IE if I type "Great Miami Hot" we can suggest our example,  "Great Miami Hotel"
-
-            more questions, but this gets us started
-             -->
+            <form id="q1">
+                Do you need a venue?
+            <br>
+                <input type="radio" name="venues" value="yes">Yes<br>
+                <input type="radio" name="venues" value="no">No<br>
+            </form>
+                <p>
+            <form id="q2">
+                Do you need a caterer?
+                <br>
+                <input type="radio" name="caterers" value="yes">Yes<br>
+                <input type="radio" name="caterers" value="no">No<br>
+            </form>
+                </p>
+                <p>
+            <form id="q3">
+                Do you need decorations?
+                <br>
+                <input type="radio" name="decorations" value="yes">Yes <br>
+                <input type="radio" name="decorations" value="no">No
+                </p>
+                <button id="submit">Submit</button>
+            </form>
+            <div id="results">
+                <div id="venue-results"></div>
+                <div id="food-results"></div>
+                <div id="decor-results"></div>
+            </div>
         </div>
 
     </div>
 
     <footer id="Copyright"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="js/signup.js"></script>
+<!-- <script src="js/main.js"></script> -->
+<script src="js/login.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 
