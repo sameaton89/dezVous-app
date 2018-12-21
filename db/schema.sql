@@ -3,36 +3,42 @@ DROP DATABASE IF EXISTS dezvous_db;
 CREATE DATABASE dezvous_db;
 USE dezvous_db;
 
-DROP TABLE IF EXISTS caterers;
-CREATE TABLE caterers
+DROP TABLE IF EXISTS Foods;
+CREATE TABLE Foods
 (
     id int NOT NULL AUTO_INCREMENT,
     name varchar(255) NOT NULL,
     address varchar(255) NOT NULL,
     website varchar(255) NOT NULL,
     phone_number varchar(45) NOT NULL,
+    createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 );
 
-DROP TABLE IF EXISTS locations;
-CREATE TABLE locations
+DROP TABLE IF EXISTS Venues;
+CREATE TABLE Venues
 (
     id int NOT NULL AUTO_INCREMENT,
     name varchar(255) NOT NULL,
     address varchar(255) NOT NULL,
     website varchar(255) NOT NULL,
     phone_number varchar(45) NOT NULL,
+    createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 );
 
-DROP TABLE IF EXISTS decoration_services;
-CREATE TABLE decoration_services
+DROP TABLE IF EXISTS Decors;
+CREATE TABLE Decors
 (
     id int NOT NULL AUTO_INCREMENT,
     name varchar(255) NOT NULL,
     address varchar(255) NOT NULL,
     website varchar(255) NOT NULL,
     phone_number varchar(45) NOT NULL,
+    createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 );
 

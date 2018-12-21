@@ -129,7 +129,32 @@ app.put("/account", function (req, res)
 
 });
 
+  // GET route for getting all of the caterers
+  app.get("/api/food", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Foods.findAll({}).then(function(dbFoods) {
+      // We have access to the todos as an argument inside of the callback function
+      res.json(dbFoods);
+    });
+  });
 
+   // GET route for getting all of the venues
+   app.get("/api/venue", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Venues.findAll({}).then(function(dbVenues) {
+      // We have access to the todos as an argument inside of the callback function
+      res.json(dbVenues);
+    });
+  });
+
+   // GET route for getting all of the decorators
+   app.get("/api/decor", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Decors.findAll({}).then(function(dbDecors) {
+      // We have access to the todos as an argument inside of the callback function
+      res.json(dbDecors);
+    });
+  });
 
 
 

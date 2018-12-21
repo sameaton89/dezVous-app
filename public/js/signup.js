@@ -26,4 +26,5 @@ function signUpUser(data) {
 		window.location.replace("/create")
 		console.log(userData.username);
 	});
+
 }
