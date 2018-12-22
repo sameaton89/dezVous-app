@@ -69,3 +69,7 @@ nav#navbar-banner span {
     font-size: 20px;
     color: black;
 }
+
+strong {
+    font-weight: 15px;
+}

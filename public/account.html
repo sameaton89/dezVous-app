@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>dezVous</title>
-    <!-- add V logo to tab -->
+    <link rel="shortcut icon" href="./images/dezvous_logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,36 +18,31 @@
 
 <body>
     <nav id="navbar-banner" class="" role="navigation">
-        <!-- screen width, content centered on mobile, neutral bg? -->
         <div class="nav-wrapper N/A transparent">
             <div class="container">
-                <a class="brand-logo"><span>dezVous</span></a>
+                <a href="/" class="brand-logo"><span>dezVous</span></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <!-- originally intended to allow mobile responsive navbar layout with hamburger collapsible that would trigger a panel on the left side with nav links DOES NOT WORK 12-22-18 -->
                 <ul class="right hide-on-med-and-down">
                     <li id="Home"><a href="/"><span>Home</span></a></li>
-                    <!-- links to landing page, when clicked on landing page refresh? -->
+                    <!-- links to landing page, refreshes on click -->
                     <li id="Create"><a href="/create"><span>Create</span></a></li>
-                    <!-- links to app page, scroll down animation? push landing page content down?-->
+                    <!-- links to app page-->
                     <li id="Account"><a href="/account"><span>Account</span></a></li>
-                    <!-- links to user account page, if not logged in to sign up page? sign up modal? integrate google auth? optional? -->
+                    <!-- links to user account page, if not logged in to sign up page? sign up modal -->
+
                     <!-- <li id="contactUs" class=""><a href="/contactus"><span>Contact Us</span></a></li> -->
-                    <!-- links to our portfolios? linkedIn pages? short "about us" segment? github repo for website? -->
+                    <!-- links to our portfolios? linkedIn pages? short "about us" segment? github repo for website? Not a priority so temp removed 12-22-18 -->
                 </ul>
                 <ul class="sidenav" id="mobile-demo">
                     <li id="Home"><a href="/"><span>Home</span></a></li>
-                    <!-- links to landing page, when clicked on landing page refresh? -->
                     <li id="Create"><a href="/create"><span>Create</span></a></li>
-                    <!-- links to app page, scroll down animation? push landing page content down?-->
                     <li id="Account"><a href="/account"><span>Account</span></a></li>
-                    <!-- links to user account page, if not logged in to sign up page? sign up modal? integrate google auth? optional? -->
-                    <!-- <li id="contactUs" class=""><a href="/contactus"><span>Contact Us</span></a></li> -->
-                    <!-- links to our portfolios? linkedIn pages? short "about us" segment? github repo for website? -->
                 </ul>
+                <!-- Suuuuuppoooooossed to tie into hamburger collapsible navbar -->
             </div>
         </div>
     </nav>
-
-    <!-- ------------------------------------------------- -->
 
     <div class="container">
 
