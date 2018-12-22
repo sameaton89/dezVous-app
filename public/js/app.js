@@ -37,9 +37,18 @@ var pullVenue = function() {
        method: "GET",
        url: "/api/venue"
    }).then(function(results) {
-       console.log(results);
-       $("#venue-results").append(JSON.stringify(results));
-       
+    //    console.log(results);
+    //    console.log(results[0]);
+    // var results = results.data;
+    for (var i = 0; i < results.length; i++) {
+        var resultsDiv = $("<div>");
+        var p = $("<p>").html("Name: " + results[i].name + "<br>Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
+        resultsDiv.append(p);
+        $("#venue-results").append(resultsDiv);
+
+    }
+    var venues = $("<p>").html("<strong>Venues");
+    $("#venue-title").html(venues);
    });
 }
 
@@ -49,8 +58,16 @@ var pullFood = function() {
         url: "/api/food"
     }).then(function(results) {
         console.log(results);
-        $("#venue-results").append(JSON.stringify(results));
-    });
+        for (var i = 0; i < results.length; i++) {
+            var resultsDiv = $("<div>");
+            var p = $("<p>").html("Name: " + results[i].name + "<br>Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
+            resultsDiv.append(p);
+            $("#food-results").append(resultsDiv);
+    
+        }    });
+        var caterers = $("<p>").html("<strong>Caterers");
+        $("#food-title").html(caterers);
+
  }
  var pullDecor = function() {
     $.ajax ({
@@ -58,6 +75,13 @@ var pullFood = function() {
         url: "/api/decor"
     }).then(function(results) {
         console.log(results);
-        $("#venue-results").append(JSON.stringify(results));
-    });
+        for (var i = 0; i < results.length; i++) {
+            var resultsDiv = $("<div>");
+            var p = $("<p>").html("Name: " + results[i].name + "<br>Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
+            resultsDiv.append(p);
+            $("#decor-results").append(resultsDiv);
+
+        }    });
+        var decorators = $("<p>").html("<strong>Decorating Services & Equipment Rental");
+        $("#decor-title").html(decorators);
  }
