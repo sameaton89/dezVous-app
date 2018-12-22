@@ -69,8 +69,8 @@ var pullFood = function() {
         console.log(results);
         for (var i = 0; i < 5; i++) {
             var resultsDiv = $("<div class='card-panel transbox center-align'>");
-            var p = $("<p class='fuck-my-shit-up-fam'>").html("Name: " + results[i].name + "<br>");
-            var q = $("<p class='this-is-the-shit-fam'>").html("Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
+            var p = $("<p class='fuck-my-shit-up-fam'>").html(results[i].name + "<br>");
+            var q = $("<p class='this-is-the-shit-fam'>").html("<strong>Address: </strong>" + results[i].address + "<br><strong>Phone Number:</strong> " + results[i].phone_number + "<br><strong>Website:</strong> " + results[i].website);
             resultsDiv.append(p);
             resultsDiv.append(q);
             $("#food-results").append(resultsDiv);
@@ -88,8 +88,8 @@ var pullFood = function() {
         console.log(results);
         for (var i = 0; i < 5; i++) {
             var resultsDiv = $("<div class='card-panel transbox center-align'>");
-            var p = $("<p class='fuck-my-shit-up-fam'>").html("Name: " + results[i].name + "<br>");
-            var q = $("<p class='this-is-the-shit-fam'>").html("Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
+            var p = $("<p class='fuck-my-shit-up-fam'>").html(results[i].name + "<br>");
+            var q = $("<p class='this-is-the-shit-fam'>").html("<strong>Address: </strong>" + results[i].address + "<br><strong>Phone Number:</strong> " + results[i].phone_number + "<br><strong>Website:</strong> " + results[i].website);
             resultsDiv.append(p);
             resultsDiv.append(q);
             $("#decor-results").append(resultsDiv);
