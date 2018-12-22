@@ -8,21 +8,39 @@ body {
 h2 {
     font-family: 'Pacifico', cursive;
     text-shadow: 2px 2px 5px rgb(250, 107, 190);
-    font-size: 45px;
+    font-size: 60px;
     color: rgb(255, 64, 175);
 }
 
-.card-panel {
-    border-radius: 25px;
-    background-color: rgb(255, 255, 255, 0.8);
+h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    text-shadow: 2px 2px 8px rgb(253, 253, 253);
+    color: rgb(0, 0, 0);
 }
 
-div.transbox label, div.transbox span , div.transbox p{
-    font-weight: bold;
+h5 {
+    font-family: 'Satisfy', cursive;
+    font-size: 40px;
+    text-shadow: 2px 2px 8px rgb(253, 253, 253);
+    color: rgb(0, 0, 0);
+}
+
+/* .card-panel {
+    border-radius: 25px;
+    background-color: rgba(0,0,0,0);
+    overflow: hidden;
+} */
+
+.transbox {
+    background-image: url("../images/super-cloudy-sky.jpg");
+    background-size: inherit;
 }
 
 #navbar-banner {
-    background-color: rgb(255, 255, 255, 0.8);
+    /* background-color: rgb(255, 255, 255, 0.8); */
+    background-image: url("../images/super-cloudy-sky.jpg");
+    background-size: inherit;
 }
 
 nav#navbar-banner span {
