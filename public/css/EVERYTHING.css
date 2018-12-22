@@ -33,6 +33,7 @@ h5 {
 } */
 
 .transbox {
+    border-radius: 25px;
     background-image: url("../images/super-cloudy-sky.jpg");
     background-size: inherit;
 }
@@ -55,4 +56,16 @@ nav#navbar-banner span {
 }
 .slider {
     border-radius: 25px;
+}
+
+.fuck-my-shit-up-fam {
+    font-family: 'Satisfy', cursive;
+    font-size: 35px;
+    text-shadow: 2px 2px 8px rgb(250, 107, 190);
+    color: rgb(255, 64, 175);
+}
+.this-is-the-shit-fam {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    color: black;
 }

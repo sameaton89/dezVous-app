@@ -3,7 +3,7 @@ $("#submit").on("click", function(){
     var q1 = $("#q1").serializeArray()[0].value;
     var q2 = $("#q2").serializeArray()[0].value;
     var q3 = $("#q3").serializeArray()[0].value;    
-    if (q1 === "yes" && q2 === "no" && q3 === "no"){
+    if        (q1 === "yes" && q2 === "no" && q3 === "no"){
         // console.log("yes no no");
         pullVenue();
     } else if (q1 === "no" && q2 === "yes" && q3 === "no"){
@@ -32,22 +32,31 @@ $("#submit").on("click", function(){
     }
 });
 
+// var fuckItUp = function() {
+//     for (var i = 0; i < 5; i++) {
+//         var resultsDiv = $("<div class='card-panel transbox center-align'>");
+//         var p = $("<p class='fuck-my-shit-up-fam'>").html("Name: " + results[i].name + "<br>");
+//         var q = $("<p class='this-is-the-shit-fam'>").html("Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
+//         resultsDiv.append(p);
+//         resultsDiv.append(q);
+// };
+
 var pullVenue = function() {
    $.ajax ({
        method: "GET",
        url: "/api/venue"
    }).then(function(results) {
-    //    console.log(results);
-    //    console.log(results[0]);
-    // var results = results.data;
-    for (var i = 0; i < results.length; i++) {
-        var resultsDiv = $("<div>");
-        var p = $("<p>").html("Name: " + results[i].name + "<br>Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
+       console.log(results);
+    for (var i = 0; i < 5; i++) {
+        var resultsDiv = $("<div class='card-panel transbox center-align'>");
+        var p = $("<p class='fuck-my-shit-up-fam'>").html(results[i].name + "<br>");
+        var q = $("<p class='this-is-the-shit-fam'>").html("Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
         resultsDiv.append(p);
+        resultsDiv.append(q);
         $("#venue-results").append(resultsDiv);
 
     }
-    var venues = $("<p>").html("<strong>Venues");
+    var venues = $("<h2 class='center-align'>").html("Venues");
     $("#venue-title").html(venues);
    });
 }
@@ -58,14 +67,16 @@ var pullFood = function() {
         url: "/api/food"
     }).then(function(results) {
         console.log(results);
-        for (var i = 0; i < results.length; i++) {
-            var resultsDiv = $("<div>");
-            var p = $("<p>").html("Name: " + results[i].name + "<br>Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
+        for (var i = 0; i < 5; i++) {
+            var resultsDiv = $("<div class='card-panel transbox center-align'>");
+            var p = $("<p class='fuck-my-shit-up-fam'>").html("Name: " + results[i].name + "<br>");
+            var q = $("<p class='this-is-the-shit-fam'>").html("Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
             resultsDiv.append(p);
+            resultsDiv.append(q);
             $("#food-results").append(resultsDiv);
     
         }    });
-        var caterers = $("<p>").html("<strong>Caterers");
+        var caterers = $("<h2 class='center-align'>").html("<strong>Caterers");
         $("#food-title").html(caterers);
 
  }
@@ -75,13 +86,15 @@ var pullFood = function() {
         url: "/api/decor"
     }).then(function(results) {
         console.log(results);
-        for (var i = 0; i < results.length; i++) {
-            var resultsDiv = $("<div>");
-            var p = $("<p>").html("Name: " + results[i].name + "<br>Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
+        for (var i = 0; i < 5; i++) {
+            var resultsDiv = $("<div class='card-panel transbox center-align'>");
+            var p = $("<p class='fuck-my-shit-up-fam'>").html("Name: " + results[i].name + "<br>");
+            var q = $("<p class='this-is-the-shit-fam'>").html("Address: " + results[i].address + "<br>Phone Number: " + results[i].phone_number + "<br>Website: " + results[i].website);
             resultsDiv.append(p);
+            resultsDiv.append(q);
             $("#decor-results").append(resultsDiv);
 
         }    });
-        var decorators = $("<p>").html("<strong>Decorating Services & Equipment Rental");
+        var decorators = $("<h2 class='center-align'>").html("<strong>Decorating Services & Equipment Rental");
         $("#decor-title").html(decorators);
  }
