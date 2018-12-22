@@ -31,7 +31,7 @@
                     <!-- links to app page, scroll down animation? push landing page content down?-->
                     <li id="Account"><a href="/account"><span>Account</span></a></li>
                     <!-- links to user account page, if not logged in to sign up page? sign up modal? integrate google auth? optional? -->
-                    <li id="contactUs" class=""><a href="/contactus"><span>Contact Us</span></a></li>
+                    <!-- <li id="contactUs" class=""><a href="/contactus"><span>Contact Us</span></a></li> -->
                     <!-- links to our portfolios? linkedIn pages? short "about us" segment? github repo for website? -->
                 </ul>
                 <ul class="sidenav" id="mobile-demo">
@@ -41,7 +41,7 @@
                     <!-- links to app page, scroll down animation? push landing page content down?-->
                     <li id="Account"><a href="/account"><span>Account</span></a></li>
                     <!-- links to user account page, if not logged in to sign up page? sign up modal? integrate google auth? optional? -->
-                    <li id="contactUs" class=""><a href="/contactus"><span>Contact Us</span></a></li>
+                    <!-- <li id="contactUs" class=""><a href="/contactus"><span>Contact Us</span></a></li> -->
                     <!-- links to our portfolios? linkedIn pages? short "about us" segment? github repo for website? -->
                 </ul>
             </div>
@@ -52,7 +52,7 @@
 
         <div class="row">
             <h2 class="center-align">Sign up for an account</h2>
-            <form class="col s12">
+            <form class="signup col s12">
                 <div class="card-panel content-align transbox">
                     <div class="row">
                         <div class="input-field col s12">
@@ -75,15 +75,18 @@
                                 Password</span>
                         </div>
                     </div>
+                    <div class="container center-align">
+                        <button class="btn waves-effect waves-light indigo lighten-1" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                        <br>
+                        <a href="/account">
+                            <p class="waves-effect waves-light btn center-align indigo lighten-1">Actually, I just need
+                                to
+                                log in</p>
+                        </a>
+                    </div>
                 </div>
-                <button class="btn waves-effect waves-light indigo lighten-1" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                </button>
-                <br>
-                <a href="/account">
-                    <p class="waves-effect waves-light btn center-align indigo lighten-1">Actually, I just need to
-                        log in</p>
-                </a>
             </form>
         </div>
     </div>
@@ -154,8 +157,6 @@
     <script src="js/app.js"></script>
     <script> $(document).ready(function () { $('.slider').slider({ full_width: true }); }); </script>
     <!-- this line is suppooooosed to fix the slider -->
-    
-
 </body>
 
 </html>
